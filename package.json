@@ -1,0 +1,19 @@
+{
+  "name": "hackathon_axway-itfest_2020_repo",
+  "version": "1.0.0",
+  "description": "Application made for the hackathon 2020",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo/issues"
+  },
+  "homepage": "https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo#readme"
+}
