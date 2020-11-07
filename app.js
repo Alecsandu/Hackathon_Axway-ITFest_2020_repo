@@ -5,6 +5,9 @@ const formidable = require('formidable')
 const session = require('express-session')
 const crypto = require('crypto');
 const User = require("./config/models/User");
+const Project = require("./config/models/Project")
+const Card = require("./config/models/Card")
+const Column = require("./config/models/Column")
 
 const app = express();
 
@@ -22,7 +25,7 @@ app.use(session({
   saveUninitialized: false
 }))
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
   var form = new formidable.IncomingForm()
   form.parse(req, (err, fields, files) => {
     
@@ -31,19 +34,20 @@ app.post('/login', (req, res) => {
     encrPass += cifru.final('hex')
     let user = mongoose.findOne({email: fields.email, password: fields.password})
     if (user) {
-      req.session.username = user
+      req.session.id = user.id
     }
 
-    res.render('index')
+    res.render('index', user)
   })
 })
 
-app.post('/signup', (req, res) => {
+app.post('/signup', async (req, res) => {
   var form = new formidable.IncomingForm()
-  form.parse(req, (err, fields, files) => {
+  form.parse(req, async (err, fields, files) => {
+
     let cifru = crypto.createCipheriv('aes-128-cbc', 'mypassword')
     var encrPass = cifru.update(fields.password, 'utf8', 'hex')
-    encrPassword += cifru.final('hex')
+    encrPass += cifru.final('hex')
     
     try{
     
@@ -59,7 +63,7 @@ app.post('/signup', (req, res) => {
 
       await user.save()
 
-      res.render('signin')
+      res.render('signin', user)
     } catch(err) {
       console.log(err.message)
       res.status(500).send('Server error')
@@ -67,6 +71,57 @@ app.post('/signup', (req, res) => {
 
   })
 })
+
+app.get("/users/:id", async (req, res) => {
+  const user = await User.findOne({ _id: req.params.id})
+  req.session.user = user
+})
+
+app.post("/project", async (req, res) => {
+  if (!req.body.project_id){
+    project = new Project({
+      name:req.body.name,
+      team:[req.body.user_id],
+      columns:[]
+    })
+  }
+
+  else{
+    project = await Project.findOne({_id: req.body.project_id})
+    project.team.push(req.body.user_id)
+  }
+
+  await project.save()
+  res.json(project)
+
+})
+
+app.post("/columns", async (req, res) => {
+  const project = await Project.findOne({_id: req.body.project_id})
+  const column = new Column({
+    name: req.body.name,
+    cards:[]
+  })
+
+  project.columns.push(column)
+})
+
+app.post("/cards", async (req, res) => {
+  const project = await Project.findOne({_id: req.body.project_id})
+  for (column of project.columns) {
+    if (column._id == req.body.id){
+      column.cards.push(req.body.card_id)
+    }
+  }
+})
+/*
+app.post("/project", (req, res) => {
+  const project = Project.findOne({name: req.body.name}).populate('')
+  project.team
+})
+*/
+
+
 
 app.get("/", function (req, res) {
   res.render("index");

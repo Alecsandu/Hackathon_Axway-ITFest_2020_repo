@@ -9,7 +9,8 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    projects: [{ type: mongoose.Types.ObjectId, ref: 'Project'}]
 })
 
 module.exports = User = mongoose.model('user', UserSchema)
