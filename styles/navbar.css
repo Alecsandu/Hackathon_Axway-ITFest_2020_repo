@@ -23,7 +23,7 @@ nav {
 
 button {
   cursor: pointer;
-  display: none;
+  /*display: none;*/
 
   /*this put the button on the left*/
   align-self: flex-start;

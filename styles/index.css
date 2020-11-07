@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+#addev {
+  display: block;
+}
+
 footer {
   position: absolute;
   right: 0;
@@ -64,5 +68,22 @@ div.note h {
 
 div.note p {
   font-family: "Mulish";
-  font-size: 1.75vh;
+  font-size: 1,75vh;
+}
+
+button.add {
+  background-color: rgb(38, 127, 231);
+  border-radius: 50%;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 5vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-left: 2vw;
+  margin-top: -3vh;
+  margin-bottom: 3vh;
 }
