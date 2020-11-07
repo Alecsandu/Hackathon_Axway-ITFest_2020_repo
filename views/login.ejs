@@ -4,12 +4,20 @@
     <%- include('fragments/head'); -%>
   </head>
   <body>
-    <header><%- include('fragments/navbar'); -%></header>
+    <header>
+        <nav>
+            <ul>
+                <button>🞬</button>
+                <li><p class="Logo">WillDO</p></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign_Up</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <button id="addev" onClick="addEvents()">New task</button>
-        <div id = "events"></div>
+      
     </main>
-    
     <footer>
       <div class="copyright">
         <p>&copy 2020 ByteHub. All Rights Reserved</p>

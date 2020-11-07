@@ -3,6 +3,14 @@ body {
   padding: 0;
 }
 
+#addev {
+  display: block;
+}
+
+/*.nice {
+  background-color: red;
+}*/
+
 footer {
   position: absolute;
   right: 0;
