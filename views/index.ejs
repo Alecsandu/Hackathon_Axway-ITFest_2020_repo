@@ -6,15 +6,16 @@
   <body>
     <header><%- include('fragments/navbar'); -%></header>
     <main>
-      <div id="todolist"></div>
+      
+        <ul class="nav1">
+          <li><button id="addev" onClick="addEvents()" class="add">+</button></li>
+          <li><button onclick="incarcaPoza()" class="btn">Upload</button></li>
+          <li><button onclick="getPhotos()" class="btn">Get items</button></li>
+          <li>
+            <input type="file" id="file" name="file" class="inputfile"></li>
+            <label for="file">Choose file</label>
+        </ul>
+        <div id = "events"></div>
     </main>
-    <footer>
-      <div class="copyright">
-        <p>&copy 2020 WillDO. All Rights Reserved</p>
-      </div>
-      <div class="social">
-        <a href="#" class="support">Contact Us</a>
-      </div>
-    </footer>
   </body>
 </html>

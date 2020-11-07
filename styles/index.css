@@ -3,12 +3,183 @@ body {
   padding: 0;
 }
 
+#addev {
+  display: block;
+}
+
 footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: rgb(219, 219, 219);
+  background-color: aqua;
   text-align: center;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: aqua;
+  max-height: 8vh;
+}
+
+main {
+  margin-top: 10vh;
+  background-image: url("../mainbg.jpg");
+  background-size: cover;
+  padding: 0 0 5vh 0;
+  height: 85vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+div.note {
+  display: inline-block;
+  width: 17vw;
+  height: 17vh;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  padding: 25px 25px 0 25px;
+  margin: 0 2vw 5vh 2vw;
+  box-shadow: 1vh 1vh 5vh 0vh;
+  text-indent: 1.5vw;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+
+div.note::-webkit-scrollbar {
+  display: none;
+}
+
+div.note h {
+  font-family: "Mulish";
+  font-weight: bolder;
+  font-size: 2.5vh;
+}
+
+div.note p {
+  font-family: "Mulish";
+  font-size: 1,75vh;
+}
+
+button.add {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50%;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 5vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+}
+
+button.del {
+  background-color: rgb(38, 127, 231);
+  border-radius: 50%;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 5vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 0;
+  float: right;
+}
+
+button.btn {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50px;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 20vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+}
+
+button.btnup {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50px;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 20vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+}
+
+ul.nav1 {
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 2vh;
+  min-height: 5vh;
+  overflow: hidden;
+  font-family: "Mulish";
+  font-weight: 1000;
+  font-size: 2vh;
+}
+
+ul.nav1 li {
+  float: left;
+  padding-right: 15px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+label {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50px;
+  border: 3px solid white;
+  padding: 9px;
+  max-height: 5vh;
+  width: 20vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+
+  cursor: pointer;
 }

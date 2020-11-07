@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('fragments/head'); -%>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baloo 2" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monoton" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">
+          <img src="../../logo.jpg" class="Logo">
+        </a>
+        <ul class="nav">
+          <li style="float:right"><a href="login">Log in</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+      <div id="lform" class="main">
+        <p class="title">Byte<br><em>Hub</em></p>
+        <p class="label">Nume:</p>
+        <input type="text" name="name" placeholder="Nume" class="field">
+        <p class="label">Parola</p>
+        <input type="password" name="password" placeholder="Password" class="field">
+        <input type="password" name="password2" placeholder="Insert the password again" class="field">
+        <button id="log" onclick="login()" class="submit">Sign Up</button>
+      </div>
+    </main>
+    
+  </body>
+</html>
