@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "mongoURI": "mongodb+srv://vlad:vlad@cluster0.llgwi.mongodb.net/<ByteHub>?retryWrites=true&w=majority"
+=======
+    "mongoURI": "mongodb+srv://alex:alex@cluster0.llgwi.mongodb.net/<ByteHub>?retryWrites=true&w=majority"
+>>>>>>> e733f81c0ed46e11f90e6c42c37746f45587f89b
 }

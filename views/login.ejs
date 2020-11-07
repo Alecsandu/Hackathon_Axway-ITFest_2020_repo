@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('fragments/head'); -%>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baloo 2" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monoton" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">
+          <img src="../../logo.jpg" class="Logo">
+        </a>
+        <ul class="nav">
+          <li class="signup"><a href="signin">Sign Up</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+      <div id="lform" class="main">
+        <p class="title">Byte<br><em>Hub</em></p>
+        <p class="label">Nume:</p>
+        <input type="text" name="name" placeholder="Nume">
+        <p class="label">Parola:</p>
+        <input type="password" name="password" placeholder="Parola">
+        <button id="log" onclick="login()" class="submit">Log In</button>
+      </div>
+    </main>
+    <!--
+    <footer>
+      <div class="copyright">
+        <p>&copy 2020 ByteHub. All Rights Reserved</p>
+      </div>
+      <div class="social">
+        <a href="#" class="support">Contact Us</a>
+      </div>
+    </footer>-->
+  </body>
+</html>

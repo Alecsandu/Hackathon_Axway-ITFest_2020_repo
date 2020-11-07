@@ -9,6 +9,8 @@ const Project = require("./config/models/Project")
 const Card = require("./config/models/Card")
 const Column = require("./config/models/Column")
 
+const bodyParser = require('body-parser')
+
 const app = express();
 
 connectDB()
@@ -18,6 +20,9 @@ app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/scripts"));
 app.use(express.static(__dirname + "/images"));
 app.use(express.static(__dirname + "/node_modules/jquery/dist"));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(session({secret: 'noroc', saveUninitialized: false,resave:true}))
 
 app.use(session({
   secret: 'abcdefg',
@@ -58,7 +63,7 @@ app.post('/signup', async (req, res) => {
 
       user = new User({
         email: fields.email,
-        password: fields.password
+        password: fields.encrPass
       })
 
       await user.save()
@@ -128,8 +133,12 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-app.get("/error", function (req, res) {
-  res.render("error");
+app.get("/login", function (req, res) {
+  res.render("login");
+});
+
+app.get("/signin", function (req, res) {
+    res.render("signin");
 });
 
 app.use(function (req, res) {
