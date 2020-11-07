@@ -62,14 +62,17 @@
         btn = document.createElement('button')
         btn.id = 'btn'
         btn.innerHTML = 'Add a new task'
+        btn.onclick = "addTask()"
         column.appendChild(btn)
         document.getElementById('board').appendChild(column)
         //$("#column:last-child").insertAfter(column)
         //insertAfter(last, column)
-
-
-
-
+      }
+      addTask = () => {
+        var task = document.createElement('div')
+        task.id = 'todolist'
+        task.className = 'note'
+        
       }
     </script>
   </body>
