@@ -2,13 +2,26 @@ function addEvents()
 {
   var div = document.getElementById("events");
   var newTask = document.createElement("div");
-  var title = document.createElement("p");
+  newTask.className = "note";
+  var title = document.createElement("h");
   title.innerHTML = "New task is";
-  var desc = document.createElement("p");
+  var desc = document.createElement("textarea");
   desc.innerHTML = "Wow that is really cool";
-  //desc.className = "nice";
+  var btnup = document.createElement("button");
+  btnup.innerHTML = "Upload file";
+  /*btnup.addEventListener('click', function(){
+    incarcaPoza();
+  });*/
+  var btndel = document.createElement("button");
+  btndel.innerHTML = "End Task!";
+  btndel.addEventListener('click', function () {
+    this.parentNode.remove();
+  });
   newTask.appendChild(title);
   newTask.appendChild(desc);
+  newTask.appendChild(document.createElement("br"));
+  newTask.appendChild(btnup);
+  newTask.appendChild(btndel);
   div.appendChild(newTask);
 }
 
@@ -40,7 +53,7 @@ function getPhotos(){
         form.action = u.numele;
         var btn = document.createElement("button");
         btn.type = "submit";
-        btn.innerHTML = "Download!";
+        btn.innerHTML = "Download file!";
         form.appendChild(btn);
         var x = document.getElementById("events");
         x.appendChild(form);

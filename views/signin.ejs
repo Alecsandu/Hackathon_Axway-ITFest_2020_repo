@@ -3,6 +3,8 @@
   <head>
     <%- include('fragments/head'); -%>
     <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baloo 2" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monoton" />
   </head>
   <body>
     <header>
@@ -17,22 +19,16 @@
     </nav>
     </header>
     <main>
-      <div id="lform">
-        <p class="center">Log in</p>
+      <div id="lform" class="main">
+        <p class="title">Byte<br><em>Hub</em></p>
+        <p class="label">Nume:</p>
         <input type="text" name="name" placeholder="Nume" class="centerSelf">
-        <p class="center">Parola</p>
+        <p class="label">Parola</p>
         <input type="password" name="password" placeholder="Password" class="centerSelf">
         <input type="password" name="password2" placeholder="Insert the password again" class="centerSelf">
-        <button id="log" onclick="login()" class="centerSelf">Submit</button>
+        <button id="log" onclick="login()" class="submit">Sign Up</button>
       </div>
     </main>
-    <footer>
-      <div class="copyright">
-        <p>&copy 2020 ByteHub. All Rights Reserved</p>
-      </div>
-      <div class="social">
-        <a href="#" class="support">Contact Us</a>
-      </div>
-    </footer>
+    
   </body>
 </html>

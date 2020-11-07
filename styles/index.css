@@ -28,14 +28,62 @@ header {
 
 main {
   margin-top: 10vh;
-  background-color: rgb(255, 238, 0);
-  height: 90vh;
+  background-image: url("../mainbg.jpg");
+  background-size: cover;
+  padding: 5vh 0 5vh 0;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-test {
-  background-color: turquoise;
-  width: 12px;
-  height: 12px;
-  margin-top: 150px;
-  bottom: 0;
+main::-webkit-scrollbar {
+  display: none;
+}
+
+div.note {
+  display: inline-block;
+  width: 17vw;
+  height: 17vh;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+  margin: 0 2vw 5vh 2vw;
+  box-shadow: 1vh 1vh 5vh 0vh;
+  text-indent: 1.5vw;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+
+div.note::-webkit-scrollbar {
+  display: none;
+}
+
+div.note h {
+  font-family: "Mulish";
+  font-weight: bolder;
+  font-size: 2.5vh;
+}
+
+div.note p {
+  font-family: "Mulish";
+  font-size: 1,75vh;
+}
+
+button.add {
+  background-color: rgb(38, 127, 231);
+  border-radius: 50%;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 5vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-left: 2vw;
+  margin-top: -3vh;
+  margin-bottom: 3vh;
 }

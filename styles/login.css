@@ -2,11 +2,86 @@
   display: block;
 }
 
-.center {
-  text-align: center;
-}
-
-.centerSelf {
+.submit {
   margin: auto;
   display: block;
+  margin-top: 2vh;
+  background-color: rgb(38, 127, 231);
+  border-radius: 25px;;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 10vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  border: 2px solid rgb(38, 127, 231);
+  background-color: white;
+  color: rgb(38, 127, 231);
+  transition: 0.3s;
+}
+
+p.title {
+  text-align: center;
+  font-family: "Monoton";
+  font-size: 6vh;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 4vh;
+
+}
+
+p.title em{
+  color: rgb(35, 31, 32);
+}
+
+p.label {
+  padding-left: 20%;
+  font-family: "Baloo 2";
+  font-size: 3vh;
+}
+
+main {
+  margin-top: 10vh;
+  background-image: url("../mainbg.jpg");
+  background-size: cover;
+  padding: 10vh 0 0 0;
+  height: 80vh;
+  overflow: hidden;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+div.main {
+  height: 75vh;
+  width: 25vw;
+  background-color: white;
+  border-radius: 100px;
+  margin: auto;
+  margin-top: -4vh;
+  padding-top: 2vh;
+  font-family: "Baloo 2";
+  box-shadow: 1vh 1vh 6vh 0;
+  color: rgb(38, 127, 231);
+  font-size: 4vh;
+}
+
+input {
+  display: block;
+  margin: auto;
+  padding: 2vh;
+  margin-bottom: 2vh;
+  width: 15vw;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0vh 0vh 1vh 0 gray;
+  outline: none;
 }
