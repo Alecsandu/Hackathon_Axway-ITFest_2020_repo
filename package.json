@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo/issues"
   },
-  "homepage": "https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo#readme"
+  "homepage": "https://github.com/Alecsandu/Hackathon_Axway-ITFest_2020_repo#readme",
+  "dependencies": {
+    "daemon": "^1.1.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
+  }
 }
