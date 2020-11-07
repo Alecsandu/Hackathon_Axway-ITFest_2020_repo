@@ -9,9 +9,11 @@
       
         <ul class="nav1">
           <li><button id="addev" onClick="addEvents()" class="add">+</button></li>
-          <li><button onclick="incarcaPoza()" class="btn">Incarca</button></li>
+          <li><button onclick="incarcaPoza()" class="btn">Upload</button></li>
           <li><button onclick="getPhotos()" class="btn">Get items</button></li>
-          <li><input type="file" id="up" class="btn"></li>
+          <li>
+            <input type="file" id="file" name="file" class="inputfile"></li>
+            <label for="file">Choose file</label>
         </ul>
         <div id = "events"></div>
     </main>

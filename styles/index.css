@@ -47,7 +47,7 @@ div.note {
   border-radius: 25px;
   background-color: white;
   color: black;
-  padding: 25px;
+  padding: 25px 25px 0 25px;
   margin: 0 2vw 5vh 2vw;
   box-shadow: 1vh 1vh 5vh 0vh;
   text-indent: 1.5vw;
@@ -87,6 +87,22 @@ button.add {
   margin-bottom: 3vh;
 }
 
+button.del {
+  background-color: rgb(38, 127, 231);
+  border-radius: 50%;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 5vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 0;
+  float: right;
+}
+
 button.btn {
   display: inline-block;
   background-color: rgb(38, 127, 231);
@@ -103,6 +119,21 @@ button.btn {
   margin-bottom: 3vh;
 }
 
+button.btnup {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50px;
+  border: 3px solid white;
+  padding-top: 2,5vh;
+  height: 5vh;
+  width: 20vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+}
 
 ul.nav1 {
   list-style-type: none;
@@ -118,4 +149,37 @@ ul.nav1 {
 ul.nav1 li {
   float: left;
   padding-right: 15px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+label {
+  display: inline-block;
+  background-color: rgb(38, 127, 231);
+  border-radius: 50px;
+  border: 3px solid white;
+  padding: 9px;
+  max-height: 5vh;
+  width: 20vh;
+  color: white;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: large;
+  outline: none;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+
+  cursor: pointer;
 }

@@ -2,13 +2,28 @@ function addEvents()
 {
   var div = document.getElementById("events");
   var newTask = document.createElement("div");
+  newTask.className = "note";
   var title = document.createElement("h");
   title.innerHTML = "New task is";
   var desc = document.createElement("p");
   desc.innerHTML = "Wow that is really cool";
-  newTask.className = "note";
+  var btnup = document.createElement("button");
+  btnup.className = "btnup";
+  btnup.innerHTML = "Upload file";
+  /*btnup.addEventListener('click', function(){
+    incarcaPoza();
+  });*/
+  var btndel = document.createElement("button");
+  btndel.innerHTML = "X";
+  btndel.className = "del";
+  btndel.addEventListener('click', function () {
+    this.parentNode.remove();
+  });
   newTask.appendChild(title);
   newTask.appendChild(desc);
+  newTask.appendChild(document.createElement("br"));
+  newTask.appendChild(btnup);
+  newTask.appendChild(btndel);
   div.appendChild(newTask);
 }
 
