@@ -74,7 +74,7 @@ div.main {
   font-size: 4vh;
 }
 
-input {
+input.field {
   display: block;
   margin: auto;
   padding: 2vh;

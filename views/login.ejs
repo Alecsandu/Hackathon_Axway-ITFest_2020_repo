@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav>
-        <a href="#">
+        <a href="/">
           <img src="../../logo.jpg" class="Logo">
         </a>
         <ul class="nav">
@@ -22,20 +22,13 @@
       <div id="lform" class="main">
         <p class="title">Byte<br><em>Hub</em></p>
         <p class="label">Nume:</p>
-        <input type="text" name="name" placeholder="Nume">
+        <input type="text" name="name" placeholder="Nume" class="field">
         <p class="label">Parola:</p>
-        <input type="password" name="password" placeholder="Parola">
-        <button id="log" onclick="login()" class="submit">Log In</button>
+        <input type="password" name="password" placeholder="Parola" class="field">
+        <form action="/index">
+          <input type="submit" value="Login" class="submit"/>
+        </form>
       </div>
     </main>
-    <!--
-    <footer>
-      <div class="copyright">
-        <p>&copy 2020 ByteHub. All Rights Reserved</p>
-      </div>
-      <div class="social">
-        <a href="#" class="support">Contact Us</a>
-      </div>
-    </footer>-->
   </body>
 </html>

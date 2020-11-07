@@ -30,7 +30,11 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.get("/", function (req, res) {
+app.get("/", function(req, res){
+  res.render("home");
+});
+
+app.get("/index", function (req, res) {
   res.render("index");
 });
 
@@ -131,6 +135,28 @@ app.post("/cards", async (req, res) => {
     }
   }
 })
+
+app.post('/upload',function(req,res){
+		new formidable.IncomingForm().parse(req)
+		.on('fileBegin',function (name,file){
+			file.path = __dirname + '/images/' + file.name;//daca nu mai merge sterge ';'
+		})
+		.on('file', function(name,file){
+			let rawdata = fs.readFileSync("imagini.json");
+			let jsfis=JSON.parse(rawdata);
+			
+			jsfis.imagini.push({numele:file.name});
+			let data = JSON.stringify(jsfis);
+			fs.writeFileSync("imagini.json", data);
+			res.send("Gata");
+		});
+});
+
+app.get('/get_photos',function(req,res){
+	let rawdata = fs.readFileSync("imagini.json");
+	let jsfis=JSON.parse(rawdata);
+	res.json(jsfis);
+});
 
 app.use(function (req, res) {
   res.status(404).render("error");

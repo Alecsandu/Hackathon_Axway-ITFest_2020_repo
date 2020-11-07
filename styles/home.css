@@ -1,0 +1,55 @@
+p.title {
+  text-align: center;
+  font-family: "Monoton";
+  font-size: 20vh;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 10vh;
+
+}
+
+p.title em{
+  color: rgb(35, 31, 32);
+}
+
+p.label {
+
+  margin-bottom: -12vh;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: 3vh;
+  text-align: center;
+}
+
+p.subscript {
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 2vh;
+}
+
+main {
+  margin-top: 10vh;
+  background-image: url("../mainbg.jpg");
+  background-size: cover;
+  padding-top: 10vh;
+  height: 80vh;
+  overflow: hidden;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+div.main {
+  height: 75vh;
+  width: 75vw;
+  background-color: white;
+  border-radius: 100px;
+  margin: auto;
+  margin-top: 4vh;
+  padding-top: 2vh;
+  font-family: "Baloo 2";
+  box-shadow: 1vh 1vh 6vh 0;
+  color: rgb(38, 127, 231);
+  font-size: 4vh;
+}
