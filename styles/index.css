@@ -9,6 +9,76 @@ footer {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: rgb(219, 219, 219);
+  background-color: aqua;
   text-align: center;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: aqua;
+  max-height: 8vh;
+}
+
+main {
+  margin-top: 10vh;
+  background-color: lightblue;
+  padding: 5vh;
+  height: 80vh;
+  overflow: scroll;
+}
+
+test {
+  background-color: turquoise;
+  width: 12px;
+  height: 12px;
+  margin-top: 150px;
+  bottom: 0;
+}
+
+div.note {
+  width: 17vw;
+  height: 17vh;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+  margin-bottom: 15px;
+  box-shadow: 2vh 1.5vh 4.5vh 0vh;
+  text-indent: 1.5vw;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+
+div.note::-webkit-scrollbar {
+  display: none;
+}
+
+div.note h {
+  font-family: "Mulish";
+  font-weight: bolder;
+  font-size: 2.5vh;
+}
+
+div.note p {
+  font-family: "Mulish";
+  font-size: 1.75vh;
+}
+
+div#column {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+button#btn {
+  display: block;
+}
+
+#board {
+  display: flex;
+  flex-direction: row;
 }

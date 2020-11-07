@@ -6,8 +6,42 @@
   <body>
     <header><%- include('fragments/navbar'); -%></header>
     <main>
-      <div id="todolist"></div>
+      <div id="board">
+      <div id="column">
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content </p>
+        </div>
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content </p>
+        </div>
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content </p>
+        </div>
+      </div>
+      <div id="column">
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content </p>
+        </div>
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content </p>
+        </div>
+      </div>
+      <div id="column">
+        <div id="todolist" class="note">
+          <h>Title</h>
+          <p>content content content content content content content content content content content content content content content content content </p>
+        </div>
+      </div>
+      </div>
+      <button id='btn' onclick="myFunction()">Add a new column</button>
+      
     </main>
+    <!--
     <footer>
       <div class="copyright">
         <p>&copy 2020 WillDO. All Rights Reserved</p>
@@ -16,5 +50,28 @@
         <a href="#" class="support">Contact Us</a>
       </div>
     </footer>
+    -->
+    <script>
+      function insertAfter(referenceNode, newNode) {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+      }
+      myFunction = () => {
+        //var last = document.getElementsByTagName('main').children[children.length - 1]
+        var column = document.createElement('div')
+        column.id = 'column'
+        btn = document.createElement('button')
+        btn.id = 'btn'
+        btn.innerHTML = 'Add a new task'
+        column.appendChild(btn)
+        document.getElementById('board').appendChild(column)
+        //$("#column:last-child").insertAfter(column)
+        //insertAfter(last, column)
+
+
+
+
+      }
+    </script>
   </body>
+
 </html>
