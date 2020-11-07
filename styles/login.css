@@ -1,0 +1,12 @@
+.show {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+.centerSelf {
+  margin: auto;
+  display: block;
+}

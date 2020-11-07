@@ -7,16 +7,35 @@ body {
   display: block;
 }
 
-/*.nice {
-  background-color: red;
-}*/
-
 footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: rgb(219, 219, 219);
+  background-color: aqua;
   text-align: center;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: aqua;
+  max-height: 8vh;
+}
+
+main {
+  margin-top: 10vh;
+  background-color: rgb(255, 238, 0);
+  height: 90vh;
+}
+
+test {
+  background-color: turquoise;
+  width: 12px;
+  height: 12px;
+  margin-top: 150px;
+  bottom: 0;
 }
