@@ -3,6 +3,7 @@
   <head>
     <%- include('fragments/head'); -%>
     <link rel="stylesheet" type="text/css" href="login.css" />
+    <script type="text/javascript" src="login.js"></script>
   </head>
   <body>
     <header>
@@ -14,7 +15,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="signin">Sign Up</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
     <main>
       <div id="lform">
@@ -22,7 +23,11 @@
         <input type="text" name="name" placeholder="Nume" class="centerSelf">
         <p class="center">Parola</p>
         <input type="password" name="password" placeholder="Parola" class="centerSelf">
-        <button id="log" onclick="login()" class="centerSelf">Submit</button>
+        <!--<button id="log" onclick="login()" class="centerSelf">Submit</button>-->
+        <form action="/">
+          <input type="submit" value="Login" class="centerSelf"/>
+        </form>
+        <!--<button id="log"  class="centerSelf">Submit</button>-->
       </div>
     </main>
     <footer>
