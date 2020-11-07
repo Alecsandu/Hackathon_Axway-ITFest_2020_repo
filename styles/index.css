@@ -25,7 +25,9 @@ header {
 main {
   margin-top: 10vh;
   background-color: lightblue;
-  height: 90vh;
+  padding: 5vh;
+  height: 80vh;
+  overflow: scroll;
 }
 
 test {
@@ -34,4 +36,34 @@ test {
   height: 12px;
   margin-top: 150px;
   bottom: 0;
+}
+
+div.note {
+  width: 17vw;
+  height: 17vh;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+  margin-bottom: 15px;
+  box-shadow: 2vh 1.5vh 4.5vh 0vh;
+  text-indent: 1.5vw;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+
+div.note::-webkit-scrollbar {
+  display: none;
+}
+
+div.note h {
+  font-family: "Mulish";
+  font-weight: bolder;
+  font-size: 2.5vh;
+}
+
+div.note p {
+  font-family: "Mulish";
+  font-size: 1.75vh;
 }
