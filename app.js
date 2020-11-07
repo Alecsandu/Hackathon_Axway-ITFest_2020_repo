@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require("path");
+const connectDB = require('./config/db')
 
 const app = express();
+
+connectDB()
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/styles"));

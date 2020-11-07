@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://vlad:vlad@cluster0.llgwi.mongodb.net/<ByteHub>?retryWrites=true&w=majority"
+}
