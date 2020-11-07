@@ -2,7 +2,6 @@
 
 ## Hackathon_Axway-ITFest_2020_repo
 
-Application made for the hackathon 2020
-=======
-Application made for the hackathon
+### Aplication made for the Hackathon Axway ITFest 2020
+
 
