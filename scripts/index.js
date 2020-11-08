@@ -5,8 +5,8 @@ function addEvents()
   newTask.className = "note";
   var title = document.createElement("h");
   title.innerHTML = "New task is";
-  var desc = document.createElement("p");
-  desc.innerHTML = "Wow that is really cool";
+  var desc = document.createElement("textarea");
+  desc.innerHTML = "New Task";
   var btnup = document.createElement("button");
   btnup.className = "btnup";
   btnup.innerHTML = "Upload file";
